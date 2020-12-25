@@ -8,14 +8,14 @@ namespace MoabDashboard.Models
 {
     public class User
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Description { get; set; }
-        public long Organization { get; set; }
         public string EmailAddress { get; set; }
+        public Guid Organization { get; set; }
         public string Password { get; set; }
-        public long SecurityToken { get; set; }
+        public Guid SecurityToken { get; set; }
         public long PrimaryUser { get; set; }
     }
 }

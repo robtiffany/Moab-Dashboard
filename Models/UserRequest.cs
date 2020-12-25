@@ -13,5 +13,7 @@ namespace MoabDashboard.Models
         public string Description { get; set; }
         public string EmailAddress { get; set; }
         public string Password { get; set; }
+        public long Role { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 }

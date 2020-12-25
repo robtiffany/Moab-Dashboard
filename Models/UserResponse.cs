@@ -8,8 +8,8 @@ namespace MoabDashboard.Models
 {
     public class UserResponse
     {
-        public long Id { get; set; }
-        public long SecurityToken { get; set; }
+        public Guid Id { get; set; }
+        public Guid SecurityToken { get; set; }
         public string Status { get; set; }
         public string Message { get; set; }
     }

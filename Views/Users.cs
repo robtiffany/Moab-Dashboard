@@ -33,6 +33,8 @@ namespace MoabDashboard.Views
                         userRequest.Description = txtDescription.Text.Trim();
                         userRequest.EmailAddress = txtEmailAddress.Text.Trim();
                         userRequest.Password = txtPassword.Text.Trim();
+                        userRequest.Role = (comboBoxRole.SelectedItem as Models.Role).Id;
+                        userRequest.CreatedBy = Program.identity;
 
                         //Create JSON Document
                         var jsonString = JsonConvert.SerializeObject(userRequest);
@@ -97,10 +99,27 @@ namespace MoabDashboard.Views
 
         }
 
+        private void PopulateRoles()
+        {
+            comboBoxRole.DisplayMember = "Name";
+            comboBoxRole.ValueMember = "Id";
+
+            Models.Role role = new Models.Role();
+            role.Id = 1;
+            role.Name = "Writer";
+            comboBoxRole.Items.Add(role);
+
+            role.Id = 2;
+            role.Name = "Reader";
+            comboBoxRole.Items.Add(role);
+        }
+
         private async void Users_Load(object sender, EventArgs e)
         {
             try
             {
+                PopulateRoles();
+
                 string credentials = Program.identity.ToString() + "." + Program.securityToken.ToString();
 
                 //Send Data
@@ -156,19 +175,19 @@ namespace MoabDashboard.Views
                 //Send Data
                 ClientSDK clientSDK = new ClientSDK();
                 string uriString = Program.serverURL + "/User";
-                string groupId = string.Empty;
-                string groupName = string.Empty;
-                string groupDesc = string.Empty;
+                string userId = string.Empty;
+                string userName = string.Empty;
+                string userDesc = string.Empty;
 
                 if (listViewUsers.Items.Count > 0)
                 {
                     foreach (ListViewItem viewItem in listViewUsers.SelectedItems)
                     {
                         //Get Selected Group
-                        groupId = viewItem.SubItems[0].Text;
-                        groupName = viewItem.SubItems[1].Text;
-                        groupDesc = viewItem.SubItems[2].Text;
-                        var jsonResult = await clientSDK.Delete(uriString + "/" + groupId, credentials);
+                        userId = viewItem.SubItems[0].Text;
+                        userName = viewItem.SubItems[1].Text;
+                        userDesc = viewItem.SubItems[2].Text;
+                        var jsonResult = await clientSDK.Delete(uriString + "/" + userId, credentials);
                         var objectResult = JsonConvert.DeserializeObject<Models.Response>(jsonResult);
                         if (objectResult.Status == "success")
                         {
