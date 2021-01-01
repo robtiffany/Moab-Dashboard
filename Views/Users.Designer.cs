@@ -56,6 +56,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.columnHeaderRole = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label12
@@ -241,7 +242,8 @@
             this.columnHeaderId,
             this.columnHeaderFirstName,
             this.columnHeaderLastName,
-            this.columnHeaderDescription});
+            this.columnHeaderDescription,
+            this.columnHeaderRole});
             this.listViewUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewUsers.FullRowSelect = true;
             this.listViewUsers.GridLines = true;
@@ -272,7 +274,7 @@
             // columnHeaderDescription
             // 
             this.columnHeaderDescription.Text = "Description";
-            this.columnHeaderDescription.Width = 500;
+            this.columnHeaderDescription.Width = 350;
             // 
             // btnDeleteUser
             // 
@@ -325,6 +327,11 @@
             this.label4.Size = new System.Drawing.Size(62, 25);
             this.label4.TabIndex = 62;
             this.label4.Text = "Role:";
+            // 
+            // columnHeaderRole
+            // 
+            this.columnHeaderRole.Text = "Role";
+            this.columnHeaderRole.Width = 150;
             // 
             // Users
             // 
@@ -395,5 +402,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderLastName;
         private System.Windows.Forms.ComboBox comboBoxRole;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColumnHeader columnHeaderRole;
     }
 }

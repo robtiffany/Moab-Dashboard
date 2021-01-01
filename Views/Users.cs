@@ -60,6 +60,16 @@ namespace MoabDashboard.Views
                         listViewItem.SubItems.Add(userRequest.FirstName);
                         listViewItem.SubItems.Add(userRequest.LastName);
                         listViewItem.SubItems.Add(userRequest.Description);
+
+                        if (userRequest.Role == 1)
+                        {
+                            listViewItem.SubItems.Add("Writer");
+                        }
+                        else
+                        {
+                            listViewItem.SubItems.Add("Reader");
+                        }
+
                         listViewUsers.Items.Add(listViewItem);
                     }
                     else
@@ -135,6 +145,16 @@ namespace MoabDashboard.Views
                     listViewItem.SubItems.Add(objectResult[i].FirstName);
                     listViewItem.SubItems.Add(objectResult[i].LastName);
                     listViewItem.SubItems.Add(objectResult[i].Description);
+
+                    if(objectResult[i].Role == 1)
+                    {
+                        listViewItem.SubItems.Add("Writer");
+                    }
+                    else
+                    {
+                        listViewItem.SubItems.Add("Reader");
+                    }
+
                     listViewUsers.Items.Add(listViewItem);
                 }
 

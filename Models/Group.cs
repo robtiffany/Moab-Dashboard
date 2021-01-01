@@ -8,8 +8,10 @@ namespace MoabDashboard.Models
 {
     public class Group
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public DateTime Created { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 }
