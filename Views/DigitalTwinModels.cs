@@ -78,6 +78,8 @@ namespace MoabDashboard.Views
                     digitalTwinModelRequest.Name = txtName.Text.Trim();
                     digitalTwinModelRequest.Description = txtDescription.Text.Trim();
                     digitalTwinModelRequest.Version = Convert.ToInt64(numericUpDownVersion.Value);
+                    digitalTwinModelRequest.CreatedBy = Program.identity;
+
 
                     //Create JSON Document
                     var jsonString = JsonConvert.SerializeObject(digitalTwinModelRequest);

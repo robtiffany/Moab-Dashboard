@@ -8,11 +8,13 @@ namespace MoabDashboard.Models
 {
     public class DigitalTwinModel
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public long Organization { get; set; }
         public long Version { get; set; }
+        public Guid Organization { get; set; }
+        public DateTime Created { get; set; }
+        public Guid CreatedBy { get; set; }
 
     }
 }
