@@ -125,7 +125,7 @@ namespace MoabDashboard.Views
                 string uriString = Program.serverURL + "/DigitalTwin";
 
                 var jsonResult = await clientSDK.Read(uriString, credentials);
-                var objectResult = JsonConvert.DeserializeObject<List<Models.DigitalTwinLimitedResponse>>(jsonResult);
+                var objectResult = JsonConvert.DeserializeObject<List<Models.DigitalTwin>>(jsonResult);
 
                 for (int i = 0; i < objectResult.Count; i++)
                 {
@@ -174,6 +174,8 @@ namespace MoabDashboard.Views
                     digitalTwinRequest.Description = txtDescription.Text.Trim();
                     digitalTwinRequest.DigitalTwinModel = (comboBoxDigitalTwinModel.SelectedItem as Models.DigitalTwinModel).Id;
                     digitalTwinRequest.Group = (comboBoxGroup.SelectedItem as Models.Group).Id;
+                    digitalTwinRequest.CreatedBy = Program.identity;
+
 
                     if (checkBoxEnabled.Checked)
                     {

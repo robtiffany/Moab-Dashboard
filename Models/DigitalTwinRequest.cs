@@ -13,5 +13,6 @@ namespace MoabDashboard.Models
         public Guid DigitalTwinModel { get; set; }
         public Guid Group { get; set; }
         public long Enabled { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 }
