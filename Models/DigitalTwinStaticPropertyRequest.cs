@@ -10,6 +10,7 @@ namespace MoabDashboard.Models
     {
         public string Name { get; set; }
         public string Value { get; set; }
-        public long DigitalTwin { get; set; }
+        public Guid DigitalTwin { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 }

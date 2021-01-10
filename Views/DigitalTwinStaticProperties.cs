@@ -13,12 +13,12 @@ namespace MoabDashboard.Views
 {
     public partial class DigitalTwinStaticProperties : Form
     {
-        long twinId = 0;
+        Guid twinId;
         string twinName = string.Empty;
 
         public DigitalTwinStaticProperties(string id, string name)
         {
-            twinId = Convert.ToInt64(id);
+            twinId = Guid.Parse(id);
             twinName = name;
 
             InitializeComponent();
@@ -86,6 +86,7 @@ namespace MoabDashboard.Views
                     staticPropertyRequest.Name = txtName.Text.Trim();
                     staticPropertyRequest.Value = txtValue.Text.Trim();
                     staticPropertyRequest.DigitalTwin = twinId;
+                    staticPropertyRequest.CreatedBy = Program.identity;
 
                     //Create JSON Document
                     var jsonString = JsonConvert.SerializeObject(staticPropertyRequest);

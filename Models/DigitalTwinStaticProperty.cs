@@ -8,9 +8,12 @@ namespace MoabDashboard.Models
 {
     class DigitalTwinStaticProperty
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
-        public long DigitalTwin { get; set; }
+        public Guid DigitalTwin { get; set; }
+        public Guid Organization { get; set; }
+        public DateTime Created { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 }
