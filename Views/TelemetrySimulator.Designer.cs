@@ -1,6 +1,6 @@
 ﻿namespace MoabDashboard.Views
 {
-    partial class Telemetry
+    partial class TelemetrySimulator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Telemetry));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelemetrySimulator));
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,15 +47,15 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(12, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(157, 37);
+            this.label12.Size = new System.Drawing.Size(302, 37);
             this.label12.TabIndex = 16;
-            this.label12.Text = "Telemetry";
+            this.label12.Text = "Telemetry Simulator";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(323, 199);
+            this.label6.Location = new System.Drawing.Point(188, 199);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 25);
             this.label6.TabIndex = 68;
@@ -96,10 +96,10 @@
             // 
             this.txtPayload.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPayload.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPayload.Location = new System.Drawing.Point(476, 197);
+            this.txtPayload.Location = new System.Drawing.Point(341, 197);
             this.txtPayload.Multiline = true;
             this.txtPayload.Name = "txtPayload";
-            this.txtPayload.Size = new System.Drawing.Size(415, 389);
+            this.txtPayload.Size = new System.Drawing.Size(550, 475);
             this.txtPayload.TabIndex = 62;
             this.txtPayload.Text = resources.GetString("txtPayload.Text");
             // 
@@ -107,16 +107,16 @@
             // 
             this.txtIdentity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdentity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdentity.Location = new System.Drawing.Point(476, 123);
+            this.txtIdentity.Location = new System.Drawing.Point(341, 123);
             this.txtIdentity.Name = "txtIdentity";
-            this.txtIdentity.Size = new System.Drawing.Size(300, 31);
+            this.txtIdentity.Size = new System.Drawing.Size(435, 31);
             this.txtIdentity.TabIndex = 61;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(308, 162);
+            this.label4.Location = new System.Drawing.Point(173, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 25);
             this.label4.TabIndex = 64;
@@ -126,22 +126,22 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(323, 125);
+            this.label3.Location = new System.Drawing.Point(248, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
+            this.label3.Size = new System.Drawing.Size(87, 25);
             this.label3.TabIndex = 63;
-            this.label3.Text = "Entity Identity:";
+            this.label3.Text = "Identity:";
             // 
             // txtSecurityToken
             // 
             this.txtSecurityToken.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSecurityToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecurityToken.Location = new System.Drawing.Point(476, 160);
+            this.txtSecurityToken.Location = new System.Drawing.Point(341, 160);
             this.txtSecurityToken.Name = "txtSecurityToken";
-            this.txtSecurityToken.Size = new System.Drawing.Size(300, 31);
+            this.txtSecurityToken.Size = new System.Drawing.Size(435, 31);
             this.txtSecurityToken.TabIndex = 69;
             // 
-            // Telemetry
+            // TelemetrySimulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,9 +157,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label12);
             this.MaximizeBox = false;
-            this.Name = "Telemetry";
+            this.Name = "TelemetrySimulator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Telemetry";
+            this.Text = "Telemetry Simulator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

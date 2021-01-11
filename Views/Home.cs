@@ -57,7 +57,7 @@ namespace MoabDashboard.Views
 
         private void btnTelemetry_Click(object sender, EventArgs e)
         {
-            Views.Telemetry telemetry = new Views.Telemetry();
+            Views.TelemetrySimulator telemetry = new Views.TelemetrySimulator();
             this.Hide();
             telemetry.ShowDialog();
             this.Show();

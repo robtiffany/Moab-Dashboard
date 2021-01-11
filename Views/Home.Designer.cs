@@ -102,7 +102,7 @@
             this.btnTelemetry.Name = "btnTelemetry";
             this.btnTelemetry.Size = new System.Drawing.Size(200, 150);
             this.btnTelemetry.TabIndex = 20;
-            this.btnTelemetry.Text = "Telemetry";
+            this.btnTelemetry.Text = "Telemetry Simulator";
             this.btnTelemetry.UseVisualStyleBackColor = true;
             this.btnTelemetry.Click += new System.EventHandler(this.btnTelemetry_Click);
             // 

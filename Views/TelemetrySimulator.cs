@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MoabDashboard.Views
 {
-    public partial class Telemetry : Form
+    public partial class TelemetrySimulator : Form
     {
-        public Telemetry()
+        public TelemetrySimulator()
         {
             InitializeComponent();
         }
