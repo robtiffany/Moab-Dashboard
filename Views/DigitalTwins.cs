@@ -330,6 +330,34 @@ namespace MoabDashboard.Views
                 }
             }
         }
+
+        private void btnDigitalThreadEvents_Click(object sender, EventArgs e)
+        {
+            string id = string.Empty;
+            string name = string.Empty;
+
+            if (listViewTwins.Items.Count > 0)
+            {
+                if (listViewTwins.SelectedItems.Count > 0)
+                {
+                    foreach (ListViewItem viewItem in listViewTwins.SelectedItems)
+                    {
+                        //Get Selected Item
+                        id = viewItem.SubItems[0].Text;
+                        name = viewItem.SubItems[1].Text;
+
+                        Views.DigitalThreadEvents digitalThreadEvents = new Views.DigitalThreadEvents(id, name);
+                        this.Hide();
+                        digitalThreadEvents.ShowDialog();
+                        this.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Select a Digital Twin and try again.", "Information");
+                }
+            }
+        }
     }
 
 

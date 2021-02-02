@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -79,6 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientSDK.cs" />
+    <Compile Include="Models\DigitalThreadEvent.cs" />
+    <Compile Include="Models\DigitalThreadEventRequest.cs" />
     <Compile Include="Models\DigitalTwin.cs" />
     <Compile Include="Models\DigitalTwinLimitedResponse.cs" />
     <Compile Include="Models\DigitalTwinModel.cs" />
@@ -110,6 +112,12 @@
     </Compile>
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DigitalThreadEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DigitalThreadEvents.Designer.cs">
+      <DependentUpon>DigitalThreadEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DigitalTwinModels.cs">
       <SubType>Form</SubType>
@@ -170,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DigitalThreadEvents.resx">
+      <DependentUpon>DigitalThreadEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DigitalTwinModels.resx">
       <DependentUpon>DigitalTwinModels.cs</DependentUpon>
